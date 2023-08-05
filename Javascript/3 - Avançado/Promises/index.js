@@ -11,7 +11,11 @@ function aleatorio(min, max) {
 
 function timeout(msg, tempo) {
   return new Promise((resolve, reject) => {
-    if (typeof msg !== "string") reject("Carácter inválido");
+    if (typeof msg !== "string") {
+      reject("Carácter inválido");
+      return;
+    }
+
     setTimeout(() => {
       resolve(msg);
     }, tempo);
@@ -39,5 +43,5 @@ timeout("Inicializando...", aleatorio(1, 3))
     //o CATCH só funcionará quando o REJECT for executado
   })
   .catch((e) => {
-    console.log('ERRO: ', e);
+    console.log("ERRO: ", e);
   });
