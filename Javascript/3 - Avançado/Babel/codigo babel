@@ -1,0 +1,7 @@
+inicia um arquivo json padrão : npm init - y
+
+instala o babel : npm install --save-dev @babel/cli @babel/preset-env @babel/core
+
+faz a compilação : npx babel main.js -o bundle.js --presets=@babel/env
+
+compilação automatica : 'babel' : 'babel ./main.js -o ./bundle.js --presets=@babel/env -w'
