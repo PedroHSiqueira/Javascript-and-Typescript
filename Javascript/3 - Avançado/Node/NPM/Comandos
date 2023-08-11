@@ -1,0 +1,34 @@
+iniciar o NPM: 
+
+npm init -y
+
+quando possuir um ^ na versão de uma dependência quer dizer que ela pode ser atualizada a qualquer momento para outra versão superior, um exemplo a seguir:
+
+"express": "^4.18.2"
+
+para usar o pacote so na parte de desenvolvimento, devemos mover o mesmo para as Dev-dependencies, um exemplo a seguir: 
+
+npm install express --save-dev
+
+resultado: 
+
+"devDependencies": {
+  "express": "^4.18.2"
+}
+
+e para retornar para dependência normal, usamos o codigo a seguir:
+
+npm instal express --save-prod
+
+para instalar uma versão especifica usamos o @ para informar qual será, exemplo a 2.1.0:
+
+npm instal express@2.1.0
+
+para atualizar todos os pacotes de uma vez se usa o comando:
+
+npm update
+
+para desinstalar uma dependência se usa o comando uninstall:
+
+npm uninstall express
+
