@@ -9,7 +9,16 @@ const app = express();
 //res => resposta
 
 app.get('/', (req, res) => {
-  res.send('Hello, World')
+  res.send(`
+  <form action="/" method="POST">
+  Nome: <input type="text name="nome>
+  <button>enviar formulário</button>
+  </form>
+  `)
+})
+
+app.post('/', (req, res) => {
+  res.send('recebi o formulário')
 })
 
 app.get('/contato', (req, res) => {
